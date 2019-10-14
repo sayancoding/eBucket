@@ -1,32 +1,12 @@
 import React, { Component } from 'react'
 import Item from '../../Components/ShopingArea/Item/Item'
 import './ItemDirectory.css'
+import Data_Details from './Item_Details.data'
 
 class ItemDirectory extends Component {
 
     state = {
-        items : [
-            {
-                id:1,
-                title:'item1',
-                subtitle:'subtitle'
-            },
-            {
-                id: 2,
-                title:'item2',
-                subtitle:'subtitle'
-            },
-            {
-                id: 3,
-                title:'item3',
-                subtitle:'subtitle'
-            },
-            {
-                id: 4,
-                title:'item4',
-                subtitle:'subtitle'
-            },
-        ]
+        items : Data_Details,
     }
 
     render() {
