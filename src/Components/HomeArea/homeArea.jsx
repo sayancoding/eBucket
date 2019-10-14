@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Link,Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
  const HomeArea = (props) => {
      console.log(props)
@@ -10,7 +10,6 @@ import {Link,Route} from 'react-router-dom';
             <Link to='/shop' >
                 <p>Shop</p>
             </Link>
-            
         </div>
     )
 }

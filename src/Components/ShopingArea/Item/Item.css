@@ -1,0 +1,9 @@
+.ItemContainer{
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    box-shadow: 1px 5px 18px rgba(187, 187, 187, 0.733);
+    border-radius: 4px;
+    margin-top: 1rem;
+    margin-left: 12px;;
+}
