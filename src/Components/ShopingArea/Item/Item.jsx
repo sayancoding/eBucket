@@ -1,13 +1,18 @@
 import React from 'react'
+import {Link, withRouter} from 'react-router-dom';
+
 import './Item.css';
 
 const Item = (props) => {
+    // console.log(props);
     return (
+        <Link to={`${props.match.url}/${props.Itemid}`}>
         <div className='ItemContainer'>
             <h2>{props.title}</h2>
             <p>{props.subtitle}</p>
         </div>
+        </Link>
     )
 }
 
-export default Item;
+export default withRouter(Item);

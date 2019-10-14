@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Item from '../../Components/ShopingArea/Item/Item'
 import './ItemDirectory.css'
-export default class ItemDirectory extends Component {
+
+class ItemDirectory extends Component {
 
     state = {
         items : [
@@ -31,7 +32,7 @@ export default class ItemDirectory extends Component {
     render() {
         const Items = (
             this.state.items.map((item)=>{
-                return (<Item key={item.id} title={item.title} 
+                return (<Item key={item.id} Itemid={item.id} title={item.title} 
                 subtitle={item.subtitle} 
                 />)
             })
@@ -43,3 +44,5 @@ export default class ItemDirectory extends Component {
         )
     }
 }
+
+export default ItemDirectory;
