@@ -1,0 +1,21 @@
+.ItemPreview
+{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+    
+}
+button{
+    display: block;
+}
+.btnBack{
+    border: none;
+    padding: 8px 12px 8px 12px;
+    background-color: rgb(7, 105, 150);
+    color: #fff;
+    font-family: 'Product Sans';
+    font-size: 1rem;
+}
+.ItemPreviewContainer{
+    align-content: center;
+}

@@ -1,11 +1,12 @@
 import React from 'react'
+import './Item_view.css'
 
-const Item_view = () => {
+const Item_view = (props) => {
     return (
-        <div>
-            <h3>Item Name</h3>
-            <p>Decription</p>
-            <p>Cost</p>
+        <div className='ItemView'>
+            <h3>{props.title}</h3>
+            <p>{props.description}</p>
+            <p>{props.cost}</p>
         </div>
     )
 }
