@@ -12,7 +12,7 @@ class ItemDirectory extends Component {
     render() {
         const Items = (
             this.state.items.map((item)=>{
-                return (<Item key={item.id} Itemid={item.id} title={item.title} 
+                return (<Item key={item.id} urlName={item.urlName} title={item.title} 
                 subtitle={item.subtitle} 
                 />)
             })
