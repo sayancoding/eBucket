@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Item_View from '../../Components/Item_view/Item_view'
+import ItemView from '../../Components/Item_view/Item_view'
 import Light_Data from './Light_DATA'
 import './Item_preview.css';
 
@@ -12,7 +12,7 @@ export default class Item_preview extends Component {
         let Item_view = (
             this.state.Item_preview_data.map(item => {
                 return (
-                    <Item_View
+                    <ItemView
                         title={item.title}
                         description={item.description}
                         cost={item.cost}
