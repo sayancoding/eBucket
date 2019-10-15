@@ -5,6 +5,7 @@ import {Route} from 'react-router-dom';
 import HomeArea from "./Components/HomeArea/homeArea";
 import ShopingArea from './Components/ShopingArea/ShopingHome/shopingHome'
 import Item_preview from './Containers/Item_Preview/Item_preview'
+import SignIn from './Containers/SignIn/SignIn'
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
             <Route path='/' exact component={HomeArea} />
             <Route path='/shop' exact component={ShopingArea} />
             <Route path='/shop/:ItemId' exact component={Item_preview} />
+            <Route path='/signin' exact component={SignIn} />
       </div>
     )
   }
