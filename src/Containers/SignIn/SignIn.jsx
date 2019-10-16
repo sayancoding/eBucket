@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {signInWithGoogle} from '../../Firebase/firebase.config'
 
 export default class SignIn extends Component {
     state={
@@ -35,7 +36,9 @@ export default class SignIn extends Component {
                     name='password' required/><br/>
 
                     <input type="submit" value="Do Submit"/>
-                </form>            
+                </form> 
+
+                <button onClick={signInWithGoogle} >Google Sign in</button>      
             </div>
         )
     }
