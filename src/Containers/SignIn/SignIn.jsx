@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import {signInWithGoogle} from '../../Firebase/firebase.config'
+import {auth} from '../../Firebase/firebase.config'
 
 export default class SignIn extends Component {
     state={
         email:'',
         password:''
     }
+    
     handleSubmit = event =>{
         event.preventDefault();
         console.log(this.state);
@@ -17,7 +19,7 @@ export default class SignIn extends Component {
             [name] : value
         })
     }
-
+    
     render() {
         return (
             <div>

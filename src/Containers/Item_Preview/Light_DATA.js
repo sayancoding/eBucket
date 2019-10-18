@@ -29,5 +29,11 @@ const Data =[
         description:'Description',
         cost:'cost',
     },
+    {
+        id:6,
+        title:'Item-Name',
+        description:'Description',
+        cost:'cost',
+    },
 ]
 export default Data;
