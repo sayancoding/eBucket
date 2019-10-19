@@ -7,7 +7,7 @@ import ShopingArea from './Components/ShopingArea/ShopingHome/shopingHome'
 import Item_preview from './Containers/Item_Preview/Item_preview'
 import SignIn from './Containers/SignIn/SignIn'
 import {auth,createUserProfileDocuments} from './Firebase/firebase.config'
-import { async } from 'q';
+
 
 class App extends Component {
 
