@@ -1,0 +1,8 @@
+.signout{
+    cursor: pointer;
+    color: brown;
+}
+.signin{
+    cursor: pointer;
+    color: rgb(0, 134, 45);
+}

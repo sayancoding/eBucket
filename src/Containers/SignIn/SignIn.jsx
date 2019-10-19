@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import {signInWithGoogle} from '../../Firebase/firebase.config'
 import {auth} from '../../Firebase/firebase.config'
+import './Signin.css'
 
 export default class SignIn extends Component {
     state={
         email:'',
         password:''
     }
-    
+
     handleSubmit = event =>{
         event.preventDefault();
         console.log(this.state);
@@ -39,8 +40,9 @@ export default class SignIn extends Component {
 
                     <input type="submit" value="Do Submit"/>
                 </form> 
-
-                <button onClick={signInWithGoogle} >Google Sign in</button>      
+                <br/>
+                <div className='signin' onClick={signInWithGoogle} >Google Sign in</div>  
+                <div className="signout" onClick={()=>auth.signOut()} >Sign out</div>    
             </div>
         )
     }
