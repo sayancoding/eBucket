@@ -7,6 +7,7 @@ import ShopingArea from './Components/ShopingArea/ShopingHome/shopingHome'
 import Item_preview from './Containers/Item_Preview/Item_preview'
 import SignIn from './Containers/SignIn/SignIn'
 import {auth,createUserProfileDocuments} from './Firebase/firebase.config'
+import { async } from 'q';
 
 class App extends Component {
 
@@ -17,8 +18,27 @@ class App extends Component {
   unsubscribeFromAuth = null
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async user=>{
-      createUserProfileDocuments(user)
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth=>{
+      if(userAuth)
+      {
+        const userRef = await createUserProfileDocuments(userAuth);
+
+        userRef.onSnapshot(snapshot=>{
+          this.setState({
+            currentUser:{
+              id:snapshot.id,
+              ...snapshot.data()
+            }
+          },()=>{
+            console.log(this.state);
+          })
+        })
+      }
+      else{
+        this.setState({
+          currentUser:userAuth
+        })
+      }
     })
   }
 
