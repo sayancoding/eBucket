@@ -1,0 +1,10 @@
+nav{
+    display: inline-block;
+    height: 4rem;
+    width: 100%;
+    background-color: rgb(255, 31, 80);
+}
+ul{
+    list-style: none;
+    display: flex;
+}
