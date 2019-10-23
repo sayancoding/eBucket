@@ -5,11 +5,11 @@ import {Route} from 'react-router-dom';
 import HomeArea from "./Components/HomeArea/homeArea";
 import ShopingArea from './Components/ShopingArea/ShopingHome/shopingHome'
 import Item_preview from './Containers/Item_Preview/Item_preview'
-import Haeder from './Components/Header/Header'
+import Header from './Components/Header/Header'
 
 import SignIn from './Containers/SignIn/SignIn'
 import {auth,createUserProfileDocuments} from './Firebase/firebase.config'
-import Header from './Components/Header/Header';
+
 
 
 class App extends Component {
@@ -54,15 +54,16 @@ class App extends Component {
      
     return (
       <div>
-        <Header/>
-        
-        <div className="App">
+        < Header/>
+
+        <div className="App">  
         <h1>Welcome</h1>
             <Route path='/' exact component={HomeArea} />
             <Route path='/shop' exact component={ShopingArea} />
             <Route path='/shop/:ItemId' exact component={Item_preview} />
             <Route path='/signin' exact component={SignIn} />
         </div>
+        
       </div>
     )
   }

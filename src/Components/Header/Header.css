@@ -1,10 +1,39 @@
 nav{
     display: inline-block;
     height: 4rem;
-    width: 100%;
-    background-color: rgb(255, 31, 80);
+    width: 100vw;
 }
+.navWrapper
+{
+    margin-right: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
 ul{
     list-style: none;
     display: flex;
+    justify-content: space-evenly;
+}
+
+li{
+    margin-left: 0.6rem;
+    padding: 6px 12px 6px 12px;
+    border-radius: 3px;
+    transition: ease-in-out .18s;
+}
+li:last-child{
+    background-color: rgb(255, 206, 166);
+    box-shadow: 0 5px 12px rgba(228, 228, 228, 0.781);
+}
+li:last-child:hover{
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(207, 207, 207, 0.781);
+}
+
+li:hover{
+    background-color: rgb(255, 206, 166);
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(228, 228, 228, 0.781);
 }
